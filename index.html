@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Meals App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="loading-screen justify-content-center align-items-center">
+      <i class="fa-solid fa-spinner fa-spin fa-3x text-white"></i>
+    </div>
+
+    <div class="side-nav-menu position-fixed top-0 vh-100 d-flex">
+      <div
+        class="nav-tab d-flex flex-column justify-content-between text-white p-3"
+      >
+        <ul class="links list-unstyled overflow-hidden">
+          <li class="py-2">
+            <a
+              href="#"
+              onclick="showSearchInputs()"
+              class="text-white text-decoration-none"
+            >
+              <i class="fa-solid fa-magnifying-glass me-2"></i>
+              Search
+            </a>
+          </li>
+          <li class="py-2">
+            <a
+              href="#"
+              onclick="getCategories()"
+              class="text-white text-decoration-none"
+            >
+              <i class="fa-solid fa-layer-group me-2"></i>
+              Categories
+            </a>
+          </li>
+          <li class="py-2">
+            <a
+              href="#"
+              onclick="getArea()"
+              class="text-white text-decoration-none"
+            >
+              <i class="fa-solid fa-earth-africa me-2"></i>
+              Area
+            </a>
+          </li>
+          <li class="py-2">
+            <a
+              href="#"
+              onclick="getIngredients()"
+              class="text-white text-decoration-none"
+            >
+              <i class="fa-solid fa-carrot me-2"></i>
+              Ingredients
+            </a>
+          </li>
+          <li class="py-2">
+            <a
+              href="#"
+              onclick="showContacts()"
+              class="text-white text-decoration-none"
+            >
+              <i class="fa-solid fa-envelope me-2"></i>
+              Contact Us
+            </a>
+          </li>
+        </ul>
+        <div>
+          <div class="mb-2">
+            <i class="fa-brands fa-facebook me-2"></i>
+            <i class="fa-brands fa-twitter me-2"></i>
+            <i class="fa-brands fa-github"></i>
+          </div>
+          <p class="small m-0">Meals App</p>
+        </div>
+      </div>
+      <div
+        class="nav-header d-flex flex-column justify-content-between align-items-center py-4 px-2 bg-white"
+      >
+        <img
+          src="https://www.themealdb.com/images/logo-small.png"
+          class="logo mb-3"
+          alt="logo"
+          onclick="searchByName('')"
+          style="cursor: pointer"
+        />
+        <i class="fa-solid fa-align-justify open-close-icon fa-2x"></i>
+        <div class="d-flex flex-column align-items-center">
+          <i class="fa-solid fa-globe mb-2"></i>
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+      </div>
+    </div>
+
+    <main class="min-vh-100">
+      <div class="container py-5">
+        <div id="searchContainer" class="mb-4"></div>
+
+        <div class="row g-4" id="rowData"></div>
+
+        <div
+          class="inner-loading-screen justify-content-center align-items-center"
+        >
+          <i class="fa-solid fa-spinner fa-spin fa-2x text-white"></i>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
